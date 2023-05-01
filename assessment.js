@@ -74,7 +74,7 @@ const books = [
   checkoutBook('The Catcher in the Rye');
   checkoutBook('Nyambura');
   checkoutBook('The Odyssey')
-//   console.log(books);
+  console.log(books);
 
 
 // Create a function returnBook that takes a book title as an argument and changes the
@@ -87,7 +87,12 @@ function returnBook(bookTitle) {
             if (bookTitle.isAvailable) {
                 bookTitle.isAvailable = true;
                 console.log(`The book "${book.bookTitle}" is avilable.`);
+            } else{
+                console.log(`The book "${book.bookTitle}" is not avilable.`);
             }
+            return;
         }
     }
+    console.log(`The book "${bookTitle}" is not available`);
 }
+returnBook('The Great Gatsby')
